@@ -44,23 +44,26 @@
 	@module-documentation:
 		Check if method has been called.
 
-		Method wrapped by call-limiting procedure can be check
-			using this procedure.
+		Method wrapped by call-limiting procedure can be check using this procedure.
 
 		By standard convention, all method wrapped by call-limiting procedure must exposed
-			a "called" function that should return true if the method has been exhausted.
+			a "called" symbol to denote the method has been exhausted.
 	@end-module-documentation
 
 	@include:
 		{
 			"falzy": "falzy",
+			"mrkd": "mrkd",
 			"protype": "protype"
 		}
 	@end-include
 */
 
 const falzy = require( "falzy" );
+const mrkd = require( "mrkd" );
 const protype = require( "protype" );
+
+const CALLED = Symbol.for( "called" );
 
 const execd = function execd( method ){
 	/*;
@@ -75,7 +78,7 @@ const execd = function execd( method ){
 		throw new Error( "invalid method" );
 	}
 
-	return ( protype( method.called, FUNCTION ) && ( method.called( ) === true ) );
+	return mrkd( CALLED, method, true );
 };
 
 module.exports = execd;
