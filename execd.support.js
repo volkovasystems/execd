@@ -35,6 +35,9 @@
               			"module": "execd",
               			"author": "Richeve S. Bebedor",
               			"eMail": "richeve.bebedor@gmail.com",
+              			"contributors": [
+              				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+              			],
               			"repository": "https://github.com/volkovasystems/execd.git",
               			"test": "execd-test.js",
               			"global": true
