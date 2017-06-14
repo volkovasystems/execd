@@ -1,8 +1,30 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./execd.deploy.js">
-		</script>
+		<title>execd unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./execd.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "execd unit test", function( assert ) {
+
+				let hello = function hello( ){ };
+				assert.equal( execd( hello ), false, "should be false" );
+
+				hello[ Symbol.for( "called" ) ] = Symbol.for( "called" );
+				assert.equal( execd( hello ), true, "should be true" );
+				
+			} );
+		</script>
+	</body>
 </html>
