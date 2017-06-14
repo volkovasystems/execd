@@ -1,12 +1,13 @@
 {
   "name": "execd",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Check if method has been called.",
   "main": "execd.deploy.js",
   "support": "execd.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon"
   ],
   "license": "MIT",
   "keywords": [
@@ -24,8 +25,8 @@
     "tests"
   ],
   "dependencies": {
-    "falzy": "^0.19.0",
-    "mrkd": "^0.5.0",
-    "protype": "^0.21.0"
+    "falzy": "^0.20.0",
+    "mrkd": "^0.7.0",
+    "protype": "^0.22.0"
   }
 }
