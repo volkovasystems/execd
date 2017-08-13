@@ -2,7 +2,6 @@ yarn add \
 babel-runtime \
 falzy \
 mrkd \
-protype \
 --save && \
 yarn add \
 babel-cli \
@@ -15,6 +14,5 @@ webpack \
 bower install \
 falzy \
 mrkd \
-protype \
 --save \
 --force-latest

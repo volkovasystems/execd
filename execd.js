@@ -57,15 +57,13 @@
 	@include:
 		{
 			"falzy": "falzy",
-			"mrkd": "mrkd",
-			"protype": "protype"
+			"mrkd": "mrkd"
 		}
 	@end-include
 */
 
 const falzy = require( "falzy" );
 const mrkd = require( "mrkd" );
-const protype = require( "protype" );
 
 const CALLED = Symbol.for( "called" );
 
@@ -78,7 +76,7 @@ const execd = function execd( method ){
 		@end-meta-configuration
 	*/
 
-	if( falzy( method ) || !protype( method, FUNCTION ) ){
+	if( falzy( method ) || typeof method != "function" ){
 		throw new Error( "invalid method" );
 	}
 
