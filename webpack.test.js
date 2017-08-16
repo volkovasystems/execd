@@ -1,13 +1,15 @@
 "use strict";
 
 const webpack = require( "webpack" );
+
+const DefinePlugin = webpack.DefinePlugin;
+const ModuleConcatenationPlugin = webpack.optimize.ModuleConcatenationPlugin;
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 
 module.exports = {
-	"entry": "./execd.support.js",
+	"entry": "./test.support.js",
 	"resolve": {
 		"descriptionFiles": [
-			".bower.json",
 			"bower.json",
 			"package.json"
 		],
@@ -32,20 +34,30 @@ module.exports = {
 		]
 	},
 	"output": {
-		"library": "execd",
+		"library": "test",
 		"libraryTarget": "umd",
-		"filename": "execd.deploy.js"
+		"filename": "test.deploy.js"
 	},
 	"plugins": [
+		new DefinePlugin( {
+			"process.env.NODE_ENV": '"production"'
+		} ),
+
+		new ModuleConcatenationPlugin( ),
+
 		new UglifyJsPlugin( {
 			"compress": {
 				"keep_fargs": true,
 				"keep_fnames": true,
-				"warnings": false
+				"keep_infinity": true,
+				"warnings": false,
+				"passes": 3
+			},
+			"mangle": {
+				"keep_fnames": true
 			},
 			"comments": false,
-			"sourceMap": true,
-			"mangle": false
+			"sourceMap": true
 		} )
 	],
 	"devtool": "#source-map"
