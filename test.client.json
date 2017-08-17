@@ -1,0 +1,116 @@
+{
+	"state": {
+		"passed": 2,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-17T08:28:15.410Z",
+	"end": "2017-08-17T08:28:49.763Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "execd",
+			"duration": 0,
+			"start": "2017-08-17T08:28:49.388Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "execd",
+			"duration": 198,
+			"start": "2017-08-17T08:28:49.389Z",
+			"end": "2017-08-17T08:28:49.587Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-17T08:28:49.391Z",
+					"end": "2017-08-17T08:28:49.391Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "execd",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-17T08:28:49.537Z",
+					"end": "2017-08-17T08:28:49.537Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "execd",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-17T08:28:49.538Z",
+					"end": "2017-08-17T08:28:49.538Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "execd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-17T08:28:49.587Z",
+					"end": "2017-08-17T08:28:49.587Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "execd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-17T08:28:49.587Z",
+					"end": "2017-08-17T08:28:49.587Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "execd"
+				}
+			]
+		},
+		{
+			"name": "`execd( function hello( ){ } )`",
+			"duration": 147,
+			"start": "2017-08-17T08:28:49.390Z",
+			"end": "2017-08-17T08:28:49.537Z",
+			"tests": [
+				{
+					"name": "should be equal to false",
+					"start": "2017-08-17T08:28:49.390Z",
+					"end": "2017-08-17T08:28:49.537Z",
+					"duration": 147,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`execd with function named 'hello' containing Symbol.for( 'called' ) property and value`",
+			"duration": 49,
+			"start": "2017-08-17T08:28:49.538Z",
+			"end": "2017-08-17T08:28:49.587Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-17T08:28:49.538Z",
+					"end": "2017-08-17T08:28:49.587Z",
+					"duration": 49,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
