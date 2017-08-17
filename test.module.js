@@ -70,6 +70,23 @@ const path = require( "path" );
 
 describe( "execd", ( ) => {
 
+	describe( "`execd( function hello( ){ } )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			assert.equal( execd( function hello( ){ } ), false );
+		} );
+	} );
+
+	describe( "`execd with function named 'hello' containing Symbol.for( 'called' ) property and value`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let hello = function hello( ){ };
+			hello[ Symbol.for( "called" ) ] = Symbol.for( "called" );
+
+			assert.equal( execd( hello ), true );
+
+		} );
+	} );
+
 } );
 
 //: @end-server
@@ -78,6 +95,24 @@ describe( "execd", ( ) => {
 //: @client:
 
 describe( "execd", ( ) => {
+
+	describe( "`execd( function hello( ){ } )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			assert.equal( execd( function hello( ){ } ), false );
+		} );
+	} );
+
+	describe( "`execd with function named 'hello' containing Symbol.for( 'called' ) property and value`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let hello = function hello( ){ };
+			hello[ Symbol.for( "called" ) ] = Symbol.for( "called" );
+
+			assert.equal( execd( hello ), true );
+
+		} );
+	} );
+
 } );
 
 //: @end-client
