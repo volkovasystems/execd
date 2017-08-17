@@ -121,6 +121,45 @@ describe( "execd", ( ) => {
 //: @bridge:
 
 describe( "execd", ( ) => {
+
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`execd( function hello( ){ } )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return execd( function hello( ){ } );
+				}
+
+			).value;
+
+			assert.equal( result, false );
+
+		} );
+	} );
+
+	describe( "`execd with function named 'hello' containing Symbol.for( 'called' ) property and value`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let hello = function hello( ){ };
+					hello[ Symbol.for( "called" ) ] = Symbol.for( "called" );
+
+					return execd( hello );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, true );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge
