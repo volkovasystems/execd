@@ -4,8 +4,8 @@
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-08-17T08:28:15.410Z",
-	"end": "2017-08-17T08:28:49.763Z",
+	"start": "2017-08-29T07:20:11.660Z",
+	"end": "2017-08-29T07:20:54.933Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -28,52 +28,52 @@
 		{
 			"name": "execd",
 			"duration": 0,
-			"start": "2017-08-17T08:28:49.388Z",
+			"start": "2017-08-29T07:20:54.545Z",
 			"tests": [],
 			"hooks": []
 		},
 		{
 			"name": "execd",
-			"duration": 198,
-			"start": "2017-08-17T08:28:49.389Z",
-			"end": "2017-08-17T08:28:49.587Z",
+			"duration": 207,
+			"start": "2017-08-29T07:20:54.545Z",
+			"end": "2017-08-29T07:20:54.752Z",
 			"tests": [],
 			"hooks": [
 				{
-					"start": "2017-08-17T08:28:49.391Z",
-					"end": "2017-08-17T08:28:49.391Z",
+					"start": "2017-08-29T07:20:54.548Z",
+					"end": "2017-08-29T07:20:54.548Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "execd",
 					"associatedTest": "should be equal to false"
 				},
 				{
-					"start": "2017-08-17T08:28:49.537Z",
-					"end": "2017-08-17T08:28:49.537Z",
+					"start": "2017-08-29T07:20:54.686Z",
+					"end": "2017-08-29T07:20:54.686Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "execd",
 					"associatedTest": "should be equal to false"
 				},
 				{
-					"start": "2017-08-17T08:28:49.538Z",
-					"end": "2017-08-17T08:28:49.538Z",
-					"duration": 0,
+					"start": "2017-08-29T07:20:54.687Z",
+					"end": "2017-08-29T07:20:54.688Z",
+					"duration": 1,
 					"title": "\"before each\" hook",
 					"associatedSuite": "execd",
 					"associatedTest": "should be equal to true"
 				},
 				{
-					"start": "2017-08-17T08:28:49.587Z",
-					"end": "2017-08-17T08:28:49.587Z",
-					"duration": 0,
+					"start": "2017-08-29T07:20:54.751Z",
+					"end": "2017-08-29T07:20:54.752Z",
+					"duration": 1,
 					"title": "\"after each\" hook",
 					"associatedSuite": "execd",
 					"associatedTest": "should be equal to true"
 				},
 				{
-					"start": "2017-08-17T08:28:49.587Z",
-					"end": "2017-08-17T08:28:49.587Z",
+					"start": "2017-08-29T07:20:54.752Z",
+					"end": "2017-08-29T07:20:54.752Z",
 					"duration": 0,
 					"title": "\"after all\" hook",
 					"associatedSuite": "execd"
@@ -82,15 +82,15 @@
 		},
 		{
 			"name": "`execd( function hello( ){ } )`",
-			"duration": 147,
-			"start": "2017-08-17T08:28:49.390Z",
-			"end": "2017-08-17T08:28:49.537Z",
+			"duration": 141,
+			"start": "2017-08-29T07:20:54.546Z",
+			"end": "2017-08-29T07:20:54.687Z",
 			"tests": [
 				{
 					"name": "should be equal to false",
-					"start": "2017-08-17T08:28:49.390Z",
-					"end": "2017-08-17T08:28:49.537Z",
-					"duration": 147,
+					"start": "2017-08-29T07:20:54.547Z",
+					"end": "2017-08-29T07:20:54.686Z",
+					"duration": 139,
 					"state": "pass"
 				}
 			],
@@ -98,15 +98,15 @@
 		},
 		{
 			"name": "`execd with function named 'hello' containing Symbol.for( 'called' ) property and value`",
-			"duration": 49,
-			"start": "2017-08-17T08:28:49.538Z",
-			"end": "2017-08-17T08:28:49.587Z",
+			"duration": 65,
+			"start": "2017-08-29T07:20:54.687Z",
+			"end": "2017-08-29T07:20:54.752Z",
 			"tests": [
 				{
 					"name": "should be equal to true",
-					"start": "2017-08-17T08:28:49.538Z",
-					"end": "2017-08-17T08:28:49.587Z",
-					"duration": 49,
+					"start": "2017-08-29T07:20:54.687Z",
+					"end": "2017-08-29T07:20:54.751Z",
+					"duration": 64,
 					"state": "pass"
 				}
 			],
